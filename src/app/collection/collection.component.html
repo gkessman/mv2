@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+    <div class="btn-group" appDropdown>
+      <button class="btn btn-secondary btn-lg dropdown-toggle">{{ selectedCollection }} <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li *ngFor="let collection of collections" (click)="onCollectionSelect(collection)"><a style="cursor: pointer"> {{ collection }}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row" *ngIf="selectedCollection != 'Choose Collection'">
+  <hr>
+  <div class="col-xs-12">
+    Here be the datatables, yarrrrr..
+  </div>
+</div>
